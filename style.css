@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f1117;
+    --card: #1b1f2b;
+    --card2: #242a39;
+    --accent: #47b5ff;
+    --accent2: #8bd5ff;
+    --text: #ffffff;
+    --sub: #aeb7c7;
+    --border: #2f3749;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(180deg,#0b0d13,#141824);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--sub);
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: var(--accent2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 7px;
+    color: var(--sub);
+    font-size: .95rem;
+}
+
+input {
+    background: var(--card2);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(71,181,255,.35);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 18px;
+}
+
+.result {
+    background: var(--card2);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    transition: .2s;
+}
+
+.result:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(71,181,255,.18);
+}
+
+.result span {
+    display: block;
+    color: var(--sub);
+    margin-bottom: 12px;
+    font-size: .95rem;
+}
+
+.result strong {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+@media (max-width:700px){
+
+    body{
+        padding:20px;
+    }
+
+    header h1{
+        font-size:2rem;
+    }
+
+}
