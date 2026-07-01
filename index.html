@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel SkyBlock Fishing Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎣 Hypixel SkyBlock Fishing Calculator</h1>
+        <p>Estimate treasure rates, bite times, and average time to obtain rare treasures.</p>
+    </header>
+
+    <section class="card">
+
+        <h2>Inputs</h2>
+
+        <div class="grid">
+
+            <div class="input-group">
+                <label>Treasure Chance (%)</label>
+                <input id="treasureChance" type="number" value="50" min="0" max="100" step="0.1">
+            </div>
+
+            <div class="input-group">
+                <label>Great / Outstanding Bonus (%)</label>
+                <input id="greatBonus" type="number" value="0" min="0" step="0.1">
+            </div>
+
+            <div class="input-group">
+                <label>Fishing Speed</label>
+                <input id="fishingSpeed" type="number" value="90" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>Fishing Speed Cap</label>
+                <input id="speedCap" type="number" value="300">
+            </div>
+
+            <div class="input-group">
+                <label>Lure Catch Reduction (0-1)</label>
+                <input id="lureReduction" type="number" value="0.25" step="0.05" min="0" max="1">
+            </div>
+
+            <div class="input-group">
+                <label>Extra Time Per Catch (seconds)</label>
+                <input id="extraTime" type="number" value="1.3" step="0.1">
+            </div>
+
+            <div class="input-group">
+                <label>Item Drop Chance (1 / x)</label>
+                <input id="itemChance" type="number" value="1000" min="1">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Results</h2>
+
+        <div class="results">
+
+            <div class="result">
+                <span>Average Bite Time</span>
+                <strong id="biteTime">--</strong>
+            </div>
+
+            <div class="result">
+                <span>Average Cast Time</span>
+                <strong id="castTime">--</strong>
+            </div>
+
+            <div class="result">
+                <span>Treasures / Hour</span>
+                <strong id="treasuresHour">--</strong>
+            </div>
+
+            <div class="result">
+                <span>Average Casts</span>
+                <strong id="avgCasts">--</strong>
+            </div>
+
+            <div class="result">
+                <span>Average Time</span>
+                <strong id="avgTime">--</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
